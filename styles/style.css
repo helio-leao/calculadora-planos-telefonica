@@ -1,0 +1,102 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+html {
+    background-image: url("https://i.ytimg.com/vi/QAli6dg1VKg/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 350px;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.8);
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: white;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#column_1, #column_2 {
+    width: 400px;
+    margin: 20px;
+}
+
+#column_1 {
+    color: white;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#user_inputs, #prices {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#prices {
+    padding: 10px;
+    border: solid 1px;
+}
+
+button {
+    padding: 15px;
+    border-style: none;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 20px;
+}
+
+input, select {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 950px) {
+    html {
+        height: auto;
+    }
+
+    main {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #column_1, #column_2 {
+        width: 300px;
+    }
+
+    #form {
+        padding: 20px;
+    }
+}

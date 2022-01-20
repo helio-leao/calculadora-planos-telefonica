@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Telzir</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Telzir FaleMais</h1>
+    </header>
+
+    <main>
+
+        <div id="column_1">
+            A empresa de telefonia Telzir, especializada em chamadas de longa distância nacional,
+            vai colocar um novo produto no mercado chamado FaleMais. Normalmente um cliente
+            Telzir pode fazer uma chamada de uma cidade para outra pagando uma tarifa fixa por
+            minuto, com o preço sendo pré-definido em uma lista com os códigos DDDs de origem
+            e destino.
+            <br><br>
+            Com o novo produto FaleMais da Telzir o cliente adquire um plano e pode falar de graça até
+            um determinado tempo (em minutos) e só paga os minutos excedentes. Os minutos
+            excedentes tem um acréscimo de 10% sobre a tarifa normal do minuto. Os planos são
+            FaleMais 30 (30 minutos), FaleMais 60 (60 minutos) e FaleMais 120 (120 minutos).
+            <br><br>
+            A Telzir, preocupada com a transparência junto aos seus clientes, quer disponibilizar uma
+            página na web onde o cliente pode calcular o valor da ligação. Ali, o cliente pode escolher os
+            códigos das cidades de origem e destino, o tempo da ligação em minutos e escolher qual o
+            plano FaleMais. O sistema deve mostrar dois valores: (1) o valor da ligação com o plano e (2)
+            sem o plano.
+        </div>
+
+        <div id="column_2">
+            <div id="form">
+                <div id="user_inputs">
+                    <label for="select_origin">Origem (DDD)</label>
+                    <select name="origin" id="select_origin">
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                    </select>
+
+                    <label for="select_destiny">Destino (DDD)</label>
+                    <select name="destiny" id="select_destiny">
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                    </select>
+
+                    <label for="input_duration">Duração (minutos)</label>
+                    <input value="0" type="number" name="duration" id="input_duration">
+
+                    <label for="select_plan">Plano</label>
+                    <select name="plan" id="select_plan">
+                        <option value="30">FaleMais 30</option>
+                        <option value="60">FaleMais 60</option>
+                        <option value="120">FaleMais 120</option>
+                    </select>
+                </div>
+
+                <div id="prices">
+                    <label for="input_price_with_plan">Com FaleMais</label>
+                    <input value="R$ 0.00" type="text" name="price_with_plan" id="input_price_with_plan" readonly>
+
+                    <label for="input_price_without_plan">Sem FaleMais</label>
+                    <input value="R$ 0.00" type="text" name="price_without_plan" id="input_price_without_plan" readonly>
+                </div>
+
+                <button onclick="calculatePrices()">Calcular</button>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="./scripts/Calculator.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
