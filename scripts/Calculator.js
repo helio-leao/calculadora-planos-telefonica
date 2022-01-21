@@ -1,6 +1,6 @@
 class Calculator {
 
-    preDefinedPrices = [
+    static preDefinedPrices = [
         { origin: '011', destiny: '016', minutePrice: 1.9 },
         { origin: '016', destiny: '011', minutePrice: 2.9 },
         { origin: '011', destiny: '017', minutePrice: 1.7 },
@@ -10,7 +10,7 @@ class Calculator {
     ]
 
     planPriceRate = 1.1
-
+    
 
     constructor(origin, destiny, duration, plan) {
         this.origin = origin
@@ -24,7 +24,7 @@ class Calculator {
         let priceWithPlan = 0
         let priceWithoutPlan = 0
 
-        for (const preDefinedPrice of this.preDefinedPrices) {
+        for (const preDefinedPrice of Calculator.preDefinedPrices) {
             if (preDefinedPrice.origin == this.origin
                 && preDefinedPrice.destiny == this.destiny) {
 
@@ -41,4 +41,15 @@ class Calculator {
         return { priceWithPlan, priceWithoutPlan }
     }
 
+    static getDestinies(origin) {
+        let destinies = []
+
+        for (const preDefinedPrice of this.preDefinedPrices) {
+            if(preDefinedPrice.origin == origin) {
+                destinies = [...destinies, preDefinedPrice.destiny]
+            }
+        }
+
+        return destinies
+    }
 }

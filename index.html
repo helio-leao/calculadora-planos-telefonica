@@ -40,7 +40,7 @@
             <div id="form">
                 <div id="user_inputs">
                     <label for="select_origin">Origem (DDD)</label>
-                    <select name="origin" id="select_origin">
+                    <select onchange="updateSelectDestiny()" name="origin" id="select_origin">
                         <option value="011">011</option>
                         <option value="016">016</option>
                         <option value="017">017</option>
@@ -56,7 +56,8 @@
                     </select>
 
                     <label for="input_duration">Duração (minutos)</label>
-                    <input value="0" type="number" name="duration" id="input_duration">
+                    <input value="0" type="number" name="duration" id="input_duration"
+                        onkeypress="return event.charCode >= 48" min="0">
 
                     <label for="select_plan">Plano</label>
                     <select name="plan" id="select_plan">
