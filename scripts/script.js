@@ -31,6 +31,8 @@ function clearSelectDestiny() {
     for(let i = select_destiny.length; i >= 0; i--) {
         select_destiny.remove(i)
     }
+
+    //document.getElementById('select_destiny').innerHTML = ''
 }
 
 updateSelectDestiny()
