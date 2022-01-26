@@ -56,8 +56,9 @@
                     </select>
 
                     <label for="input_duration">Duração (minutos)</label>
-                    <input value="0" type="number" name="duration" id="input_duration"
-                        onkeypress="return event.charCode >= 48" min="0">
+                    <input value="0" type="number" name="duration" id="input_duration" min="0"
+                        onkeypress="return event.charCode >= 48"
+                        onchange="if(value === '') value = 0" >
 
                     <label for="select_plan">Plano</label>
                     <select name="plan" id="select_plan">
